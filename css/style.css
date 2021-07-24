@@ -27,7 +27,6 @@ img{
 .header{
     position: fixed;
     width: 100%;
-    height: 56px;
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -36,7 +35,7 @@ img{
 .navbar{
     display: flex;
     align-items: center;
-    padding-top: 8px;
+    padding: 8px 0;
 }
 
 .nav-list{
@@ -803,14 +802,16 @@ label{
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1050px){
     .container{
         width: 850px;
     }
     .business-left h1{
+        width: 380px;
         font-size: 25px;
     }
     .business-left p{
+        width: 380px;
         font-size: 15px;
     }
     .link-1{
@@ -821,11 +822,33 @@ label{
         font-size: 14px;
         padding: 12px;
     }
+    iframe{
+        width: 350px;
+        height: 190px;
+    }
 }
 
 @media (max-width: 870px){
     .container{
         width: 90%;
+    }
+}
+
+@media (max-width: 850px) and (min-width: 769px){
+    .navbar{
+        flex-direction: column;
+        padding-top: 8px;
+    }
+    .work-list li{
+        flex-direction: column;
+        margin-bottom: 55px;
+    }
+    .work-list li:nth-child(even){
+        flex-direction: column;
+    }
+    .work-text{
+        text-align: center;
+        margin-top: 30px;
     }
 }
 
@@ -895,7 +918,10 @@ label{
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 405px){
+    .link-1{
+        margin-bottom: 15px;
+    }
     iframe{
         width: 300px;
         height: 170px;
